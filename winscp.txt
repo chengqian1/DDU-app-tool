@@ -1,0 +1,12 @@
+option batch abort   
+option confirm off 
+open scp://root:password@192.168.100.100 -rawsettings KEX=dh-group1-sha1   
+cd /opt
+option transfer binary  
+put D:\bat\FILE.tar.gz
+put D:\Documents\QTcode\build-DownloadF-Desktop_Qt_5_9_1_MinGW_32bit-Release\new_serviece.sh
+cd /opt  
+chmod 755 new_serviece.sh
+call ./new_serviece.sh
+exit 
+close
